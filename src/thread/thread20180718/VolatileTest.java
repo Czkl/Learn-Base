@@ -2,10 +2,10 @@ package thread.thread20180718;
 
 public class VolatileTest {
 
-    public static volatile int race = 0;
+    public static volatile int count = 0;
 
     public static void increase(){
-        race++;
+        count++;
     }
 
     private static final int THREAD_COUNT = 20;
@@ -32,7 +32,7 @@ public class VolatileTest {
 
             Thread.yield();
         }
-        System.out.println(race);
+        System.out.println(count);
     }
 
 }
